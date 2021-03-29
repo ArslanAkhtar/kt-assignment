@@ -22,7 +22,7 @@ const { Header, Sider, Content, Footer } = Layout;
 
 const App = () => {
   const pathname = window.location.pathname;
-  const [Key, setKey] = useState(["1"]);
+  const [key, setKey] = useState(["1"]);
 
   const [collapsed, setCollapsed] = useState(false);
 
@@ -46,7 +46,7 @@ const App = () => {
             theme="dark"
             mode="inline"
             defaultSelectedKeys={["1"]}
-            selectedKeys={Key}
+            selectedKeys={key}
           >
             <Menu.Item
               key="1"
@@ -80,7 +80,7 @@ const App = () => {
             )}
           </Header>
           <Content
-            className="site-layout-background"
+            className={"site-layout-background key-" + key}
             style={{
               margin: "24px 16px",
               padding: 24,
