@@ -1,29 +1,36 @@
-import React, { Fragment } from "react";
+import React, { Fragment, memo } from "react";
 import { Input, Row, Col, Typography, Space } from "antd";
+import { isEmpty } from "ramda";
 
-const SearchField = ({ setData, setLoading }) => {
+const SearchField = ({ setData, setLoading, setArtistName, setEventsData }) => {
   const { Search } = Input;
   const { Title } = Typography;
 
   const onSearch = async (value) => {
+    setEventsData(null);
     if (value === "") {
       setData(null);
       return;
     }
+
     try {
       setLoading(true);
       const response = await fetch(
         `https://rest.bandsintown.com/artists/${value}?app_id=test`
       );
       const data = await response.json();
-      if (data) setLoading(false);
-      setData({ ...data, err: "" });
+      setLoading(false);
+      if (isEmpty(data)) {
+        setData({ ...data, err: "Empty" });
+      } else {
+        setData({ ...data, err: "" });
+        setArtistName(value);
+      }
     } catch {
       setLoading(false);
       setData({ err: "Service Error" });
     }
   };
-
   return (
     <Fragment>
       <Row>
@@ -47,4 +54,4 @@ const SearchField = ({ setData, setLoading }) => {
   );
 };
 
-export default SearchField;
+export default memo(SearchField);

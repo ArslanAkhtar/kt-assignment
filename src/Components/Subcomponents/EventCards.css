@@ -1,0 +1,18 @@
+.row {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+span.heading {
+  font-weight: bold;
+}

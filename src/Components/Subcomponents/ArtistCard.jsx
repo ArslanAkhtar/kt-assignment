@@ -1,8 +1,21 @@
-import React, { Fragment } from "react";
-import { Skeleton, Card, Avatar, Divider, Row, Col, Empty } from "antd";
+import React, { Fragment, useState } from "react";
+import {
+  Skeleton,
+  Card,
+  Avatar,
+  Divider,
+  Row,
+  Col,
+  Empty,
+  Select,
+  Typography,
+} from "antd";
 
-const ArtistCard = ({ data, loading }) => {
-  if (data.err === "Service Error")
+import "./ArtistCard.css";
+
+const ArtistCard = ({ data, loading, artistName, setEventsData }) => {
+  const [eventType, setEventType] = useState(null);
+  if (data.err === "Empty") {
     return (
       <Row>
         <Col span={24}>
@@ -10,20 +23,57 @@ const ArtistCard = ({ data, loading }) => {
         </Col>
       </Row>
     );
+  }
+
+  const { Option } = Select;
   const { Meta } = Card;
+  const { Title } = Typography;
+
+  const handleChange = (value) => {
+    setEventType(value);
+  };
+
+  const handleClick = async () => {
+    try {
+      const response = await fetch(
+        `https://rest.bandsintown.com/artists/${artistName}/events?app_id=test&date=${eventType}`
+      );
+      const data = await response.json();
+      setEventsData(data);
+    } catch {
+      setEventsData(null);
+    }
+  };
+
   return (
     <Fragment>
       <Row>
         <Divider />
       </Row>
       <Row>
+        <Col span={3} offset={6}>
+          <Title level={5}>Select Event Type:</Title>
+        </Col>
+        <Col span={4}>
+          <Select
+            defaultValue="all"
+            className="main-select"
+            onChange={handleChange}
+          >
+            <Option value="all">All</Option>
+            <Option value="upcoming">Upcoming</Option>
+            <Option value="past">Past</Option>
+          </Select>
+        </Col>
+      </Row>
+      <Row>
         <Col span={24}>
-          <Card style={{ width: 300, marginTop: 16 }}>
+          <Card className="main-card" onClick={handleClick}>
             <Skeleton loading={loading} avatar active>
               <Meta
-                avatar={<Avatar src={data && data.image_url} />}
-                title={data && data.name}
-                description={data && data.facebook_page_url}
+                avatar={<Avatar src={data.image_url} />}
+                title={data.name}
+                description={data.facebook_page_url}
               />
             </Skeleton>
           </Card>

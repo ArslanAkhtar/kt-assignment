@@ -24,3 +24,7 @@
 header.ant-layout-header.site-layout-background {
   background: #7dbcea;
 }
+.ant-layout {
+  min-height: 100vh !important;
+  overflow: hidden;
+}
