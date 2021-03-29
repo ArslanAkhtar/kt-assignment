@@ -1,6 +1,7 @@
 .main-card {
   width: 300px;
   margin-top: 16px;
+  cursor: pointer;
 }
 .main-select {
   width: 120px;

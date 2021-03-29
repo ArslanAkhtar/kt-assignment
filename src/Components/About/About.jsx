@@ -1,6 +1,9 @@
 import React from "react";
 import "./About.css";
 
+import { Button } from "antd";
+import { DownloadOutlined } from "@ant-design/icons";
+
 const About = () => {
   return (
     <div id="doc2" class="yui-t7">
@@ -14,11 +17,9 @@ const About = () => {
 
             <div class="yui-u">
               <div class="contact-info">
-                <h3>
-                  <a id="pdf" href="#">
-                    Download PDF
-                  </a>
-                </h3>
+                <Button type="primary" icon={<DownloadOutlined />} size="large">
+                  Download PDF
+                </Button>
 
                 <br></br>
                 <br></br>
@@ -94,7 +95,9 @@ const About = () => {
                   <div class="talent">
                     <h2>Blocky Athletics</h2>
                     <p>
-                      It was an android and IOS that further was comprised of seven games.All games were 3D which were implemented on Unity editor.{" "}
+                      It was an android and IOS that further was comprised of
+                      seven games.All games were 3D which were implemented on
+                      Unity editor.{" "}
                     </p>
                   </div>
                 </div>
@@ -189,8 +192,10 @@ const About = () => {
         <div id="ft">
           <p>
             Muhammad Arslan &mdash;{" "}
-            <a href="mailto:arslanakhtar1012@gmail.com">arslanakhtar1012@gmail.com</a> &mdash;
-            (312) - 233-4401
+            <a href="mailto:arslanakhtar1012@gmail.com">
+              arslanakhtar1012@gmail.com
+            </a>{" "}
+            &mdash; (312) - 233-4401
           </p>
         </div>
       </div>

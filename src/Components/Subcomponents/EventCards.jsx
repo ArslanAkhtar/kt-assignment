@@ -18,7 +18,6 @@ const EventCards = ({ eventsData }) => {
     const setDateTime = new Date(dateTime).toDateString();
     return setDateTime;
   };
-  console.log(eventsData);
   return (
     <Fragment>
       <Row>
