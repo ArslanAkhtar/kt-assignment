@@ -1,16 +1,47 @@
 import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
 import "./About.css";
+import ProfilePicture from './ProfilePicture.jpg';
 
 import { Button } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    '& > *': {
+      width:'10%',
+    height:'30%',
+     float:'right',
+      margin: theme.spacing(1),
+    },
+    
+    large: {
+     
+      width: theme.spacing(10),
+      height: theme.spacing(7),
+    },
+    
+    
+    
+
+  },
+}));
+
 const About = () => {
+
+  const classes = useStyles();
   return (
     <div id="doc2" class="yui-t7">
       <div id="inner">
         <div id="hd">
           <div class="yui-gc">
+          
             <div class="yui-u first">
+            <div className={classes.root}>
+              <Avatar alt="Muhammad Arslan Akhtar" src={ProfilePicture}  className={classes.large}/>
+              </div>
               <h1 className="h1">Muhammad Arslan Akhtar</h1>
               <h2 className="h2">Senior Software Engineer</h2>
             </div>
