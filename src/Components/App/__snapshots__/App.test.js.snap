@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with Snapshot 1`] = `
+<BrowserRouter>
+  <Layout>
+    <Sider
+      collapsed={false}
+      collapsible={true}
+      trigger={null}
+    >
+      <div
+        className="logo"
+      >
+        <span>
+          Assignment
+        </span>
+      </div>
+      <Menu
+        defaultSelectedKeys={
+          Array [
+            "1",
+          ]
+        }
+        mode="inline"
+        selectedKeys={
+          Array [
+            "1",
+          ]
+        }
+        theme="dark"
+      >
+        <MenuItem
+          icon={<ForwardRef(UserOutlined) />}
+          key="1"
+          onClick={[Function]}
+        >
+          <NavLink
+            activeClassName="selected"
+            to="/"
+          >
+            About Me
+          </NavLink>
+        </MenuItem>
+        <MenuItem
+          icon={<ForwardRef(VideoCameraOutlined) />}
+          key="2"
+          onClick={[Function]}
+        >
+          <NavLink
+            activeClassName="selected"
+            to="/search"
+          >
+            Search Artist
+          </NavLink>
+        </MenuItem>
+      </Menu>
+    </Sider>
+    <Layout
+      className="site-layout"
+    >
+      <Header
+        className="site-layout-background"
+        style={
+          Object {
+            "padding": 0,
+          }
+        }
+      >
+        <ForwardRef(MenuFoldOutlined)
+          className="trigger"
+          onClick={[Function]}
+        />
+      </Header>
+      <Content
+        className="site-layout-background key-1"
+        style={
+          Object {
+            "margin": "24px 16px",
+            "minHeight": 280,
+            "padding": 24,
+          }
+        }
+      >
+        <Switch>
+          <Route
+            exact={true}
+            path="/"
+          >
+            <About />
+          </Route>
+          <Route
+            path="/search"
+          >
+            <SearchArtist />
+          </Route>
+        </Switch>
+      </Content>
+      <Footer
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        KT Assignment ©2021 Created by Muhammad Arslan
+      </Footer>
+    </Layout>
+  </Layout>
+</BrowserRouter>
+`;

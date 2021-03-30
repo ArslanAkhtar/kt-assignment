@@ -22,9 +22,19 @@
   background-color: #fff;
 }
 header.ant-layout-header.site-layout-background {
-  background: #7dbcea;
+  background: #1890ff;
 }
 .ant-layout {
   min-height: 100vh !important;
   overflow: hidden;
+}
+span.anticon.anticon-menu-fold.trigger {
+  color: #fff;
+}
+
+.ant-layout-footer {
+  padding: 24px 50px;
+  color: #fff;
+  font-size: 14px;
+  background: #1890ff;
 }

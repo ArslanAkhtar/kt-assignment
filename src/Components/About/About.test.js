@@ -1,22 +1,23 @@
 import { shallow } from "enzyme";
 import React from "react";
-import App from "./App";
+import About from "./About";
 import { configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import toJson from "enzyme-to-json";
 configure({ adapter: new Adapter() });
 
 it("renders without crashing", () => {
-  shallow(<App />);
-});
-
-it("renders Menu", () => {
-  const wrapper = shallow(<App />);
-  const logo = <span>Assignment</span>;
-  expect(wrapper.contains(logo)).toEqual(true);
+  shallow(<About />);
 });
 
 it("renders correctly with Snapshot", () => {
-  const tree = shallow(<App />);
+  const tree = shallow(<About />);
   expect(toJson(tree)).toMatchSnapshot();
+});
+
+describe("Contain Name", () => {
+  it("contains Name", () => {
+    const wrapper = shallow(<About />);
+    expect(wrapper.contains("Muhammad Arslan Akhtar"));
+  });
 });

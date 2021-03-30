@@ -188,7 +188,7 @@
 
 /* --// override to force 1/8th width grids -- */
 #doc2 .yui-gf .yui-u {
-  width: 80.2%;
+  width: 100%;
 }
 #doc2 .yui-gf div.first {
   width: 12.3%;
@@ -213,5 +213,7 @@
   background-color: #f0f2f5;
 }
 
-
-
+.profile-picture {
+  position: absolute;
+  right: 7%;
+}

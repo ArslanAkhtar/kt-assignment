@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ArtistCard correctly with Snapshot 1`] = `
+<Fragment>
+  <Row>
+    <Divider />
+  </Row>
+  <Row>
+    <Col
+      offset={6}
+      span={3}
+    >
+      <Title
+        level={5}
+      >
+        Select Event Type:
+      </Title>
+    </Col>
+    <Col
+      span={4}
+    >
+      <ForwardRef(InternalSelect)
+        className="main-select"
+        defaultValue="all"
+        onChange={[Function]}
+      >
+        <Option
+          value="all"
+        >
+          All
+        </Option>
+        <Option
+          value="upcoming"
+        >
+          Upcoming
+        </Option>
+        <Option
+          value="past"
+        >
+          Past
+        </Option>
+      </ForwardRef(InternalSelect)>
+    </Col>
+  </Row>
+  <Row>
+    <Col
+      span={24}
+    >
+      <Card
+        className="main-card"
+        onClick={[Function]}
+      >
+        <Skeleton
+          active={true}
+          avatar={true}
+          loading={false}
+          paragraph={true}
+          title={true}
+        >
+          <Meta
+            avatar={
+              <Avatar
+                shape="circle"
+                size="default"
+              />
+            }
+          />
+        </Skeleton>
+      </Card>
+    </Col>
+  </Row>
+</Fragment>
+`;
+
+exports[`renders EventCards correctly with Snapshot 1`] = `
+<Row>
+  <Col
+    span={24}
+  >
+    <Empty
+      style={
+        Object {
+          "marginTop": 24,
+        }
+      }
+    />
+  </Col>
+</Row>
+`;
+
+exports[`renders SearchField correctly with Snapshot 1`] = `
+<Fragment>
+  <Row>
+    <Col
+      offset={9}
+      span={24}
+    >
+      <Title>
+        Search Artist
+      </Title>
+    </Col>
+  </Row>
+  <Row>
+    <Col
+      offset={6}
+      span={12}
+    >
+      <Search
+        allowClear={true}
+        enterButton="Search"
+        onSearch={[Function]}
+        placeholder="Search Artist"
+        size="large"
+      />
+      <Space />
+    </Col>
+  </Row>
+</Fragment>
+`;

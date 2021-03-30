@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with Snapshot 1`] = `
+<Fragment>
+  <Row>
+    <Col
+      span={24}
+    >
+      <Memo(SearchField)
+        artistName={null}
+        setArtistName={[Function]}
+        setData={[Function]}
+        setEventsData={[Function]}
+        setLoading={[Function]}
+      />
+    </Col>
+  </Row>
+</Fragment>
+`;

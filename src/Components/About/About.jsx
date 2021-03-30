@@ -1,61 +1,33 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import "./About.css";
-import ProfilePicture from './ProfilePicture.jpg';
-
+import ProfilePicture from "../../assets/ProfilePicture.jpg";
+import { Avatar } from "antd";
 import { Button } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    '& > *': {
-      width:'10%',
-    height:'30%',
-     float:'right',
-      margin: theme.spacing(1),
-    },
-    
-    large: {
-     
-      width: theme.spacing(10),
-      height: theme.spacing(7),
-    },
-    
-    
-    
-
-  },
-}));
-
 const About = () => {
-
-  const classes = useStyles();
   return (
-    <div id="doc2" class="yui-t7">
+    <div id="doc2" className="yui-t7">
       <div id="inner">
         <div id="hd">
-          <div class="yui-gc">
-          
-            <div class="yui-u first">
-            <div className={classes.root}>
-              <Avatar alt="Muhammad Arslan Akhtar" src={ProfilePicture}  className={classes.large}/>
+          <div className="yui-gc">
+            <div className="yui-u first">
+              <div className="profile-picture">
+                <Avatar src={ProfilePicture} size={130} />
               </div>
               <h1 className="h1">Muhammad Arslan Akhtar</h1>
               <h2 className="h2">Senior Software Engineer</h2>
             </div>
 
-            <div class="yui-u">
-              <div class="contact-info">
+            <div className="yui-u">
+              <div className="contact-info">
                 <Button type="primary" icon={<DownloadOutlined />} size="large">
                   Download PDF
                 </Button>
-
                 <br></br>
                 <br></br>
                 <br></br>
-                <h3 class="email">
+                <h3 className="email">
                   <a href="mailto:arslanakhtar1012@gmail.com">
                     arslanakhtar1012@gmail.com
                   </a>
@@ -68,13 +40,13 @@ const About = () => {
 
         <div id="bd">
           <div id="yui-main">
-            <div class="yui-b">
-              <div class="yui-gf">
-                <div class="yui-u first">
+            <div className="yui-b">
+              <div className="yui-gf">
+                <div className="yui-u first">
                   <h2>Profile</h2>
                 </div>
-                <div class="yui-u">
-                  <p class="enlarge">
+                <div className="yui-u">
+                  <p className="enlarge">
                     Arslan is a dedicated, keen and results-driven individual
                     having 5+ years of experience with IT industry. Eager to
                     work in an organization which supports amazing work and
@@ -82,12 +54,12 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div class="yui-gf">
-                <div class="yui-u first">
+              <div className="yui-gf">
+                <div className="yui-u first">
                   <h2>Projects</h2>
                 </div>
-                <div class="yui-u">
-                  <div class="talent">
+                <div className="yui-u">
+                  <div className="talent">
                     <h2>Tenant</h2>
                     <p>
                       It a leasing application whose backend is implemented in
@@ -98,7 +70,7 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div class="talent">
+                  <div className="talent">
                     <h2>WRLD3D.COM</h2>
                     <p>
                       A hybrid project of React and ruby on rails using
@@ -111,7 +83,7 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div class="talent">
+                  <div className="talent">
                     <h2>Dynamic Cards</h2>
                     <p>
                       These are the responsive html cards used in Netsol smart
@@ -123,7 +95,7 @@ const About = () => {
                       scroll based pagination library.{" "}
                     </p>
                   </div>
-                  <div class="talent">
+                  <div className="talent">
                     <h2>Blocky Athletics</h2>
                     <p>
                       It was an android and IOS that further was comprised of
@@ -134,23 +106,23 @@ const About = () => {
                 </div>
               </div>
 
-              <div class="yui-gf">
-                <div class="yui-u first">
+              <div className="yui-gf">
+                <div className="yui-u first">
                   <h2>Skills</h2>
                 </div>
-                <div class="yui-u">
-                  <ul class="talent">
-                    <li>ReactJs</li>
-                    <li>NodeJs</li>
+                <div className="yui-u">
+                  <ul className="talent">
+                    <li>React</li>
+                    <li>Node.js</li>
                     <li>JQuery</li>
                     <li>HTML/HTML5</li>
                     <li>AJAX</li>
                     <li>Redux</li>
                     <li>CSS2/3</li>
-                    <li class="last">Javascript</li>
+                    <li className="last">JavaScript</li>
                   </ul>
 
-                  <ul class="talent">
+                  <ul className="talent">
                     <li>Typescript</li>
                     <li>Codeegniter</li>
                     <li>Unity</li>
@@ -158,26 +130,26 @@ const About = () => {
                     <li>PostgreSQL</li>
                     <li>C#</li>
                     <li>JQuery</li>
-                    <li class="last">PHP</li>
+                    <li className="last">PHP</li>
                   </ul>
 
-                  <ul class="talent">
+                  <ul className="talent">
                     <li>Docker</li>
                     <li>Apache</li>
                     <li>GIT-Versioning</li>
                     <li>Chef-Server</li>
                     <li>AWS</li>
-                    <li class="last">Linux</li>
+                    <li className="last">Linux</li>
                   </ul>
                 </div>
               </div>
-              <div class="yui-gf">
-                <div class="yui-u first">
+              <div className="yui-gf">
+                <div className="yui-u first">
                   <h2>Experience</h2>
                 </div>
 
-                <div class="yui-u">
-                  <div class="job">
+                <div className="yui-u">
+                  <div className="job">
                     <h2>Strategic Systems International.</h2>
                     <h3>SENIOR SOFTWARE ENGINEER</h3>
                     <h4>
@@ -186,14 +158,14 @@ const About = () => {
                     <p>Working as a Full Stack Developer</p>
                   </div>
 
-                  <div class="job">
+                  <div className="job">
                     <h2>NETSOL TECHNOLOGIES INC.</h2>
                     <h3>SENIOR SOFTWARE ENGINEER</h3>
                     <h4>2018-2020</h4>
                     <p>Worked as Front-End Developer</p>
                   </div>
 
-                  <div class="job last">
+                  <div className="job last">
                     <h2>NETSOL TECHNOLOGIES INC.</h2>
                     <h3>Software Engineer</h3>
                     <h4>2016-2018</h4>
@@ -202,11 +174,11 @@ const About = () => {
                 </div>
               </div>
 
-              <div class="yui-gf last">
-                <div class="yui-u first">
+              <div className="yui-gf last">
+                <div className="yui-u first">
                   <h2>Education</h2>
                 </div>
-                <div class="yui-u">
+                <div className="yui-u">
                   <h2>
                     Imperial College for Business Studies - Lahore, Pakistan
                   </h2>
